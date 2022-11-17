@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p" 
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	   		http://www.springframework.org/schema/beans/spring-beans.xsd
+	   		http://www.springframework.org/schema/context
+	   		http://www.springframework.org/schema/context/spring-context.xsd
+	   		http://www.springframework.org/schema/tx 
+			http://www.springframework.org/schema/tx/spring-tx.xsd
+			http://www.springframework.org/schema/mvc 
+			http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+	
+	<!-- Spring MVC Annotation -->
+	<context:annotation-config />
+	<mvc:annotation-driven/>
+	
+	<mvc:resources location="/resources/" mapping="/resources/**"></mvc:resources>
+	<mvc:resources location="/client/" mapping="/client/**"></mvc:resources>
+	<!-- Cấu hình view -->
+	<bean id="viewResolver" 
+		p:prefix="/WEB-INF/views/" p:suffix=".jsp"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver"/>
+   	
+   	<!-- Cấu hình package chứa các controller -->
+	<context:component-scan base-package="main.controller"/>
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="20971520"></property>
+	</bean>
+	
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="smtp.gmail.com"/>
+		<property name="port" value="587"/>
+		<property name="username" value="vantinhnguyen728@gmail.com"></property>
+		<property name="password" value="gccqvrjhxerjsdlu"></property>
+		<property name="defaultEncoding" value="UTF-8"/>
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.smtp.auth">true</prop>
+				<prop key="mail.smtp.socketFactory.class">javax.net.ssl.SSLSocketFactory</prop>
+				<prop key="mail.smtp.socketFactory.port">465</prop>
+				<prop key="mail.smtp.starttls.enable">false</prop>
+				<prop key="mail.debug">true</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource" p:driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver" 
+	p:url="jdbc:sqlserver://localhost:1433; Database=QLTiemCatToc" p:username="sa" p:password="215531622"></bean>
+
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"/>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</prop>
+				<prop key="hibernate.show_sql">false</prop>
+			</props>
+		</property>
+		<property name="packagesToScan" value="main.entity"/>
+	</bean>
+<!--  Transaction Manager  -->
+	<bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager" p:sessionFactory-ref="sessionFactory"/>
+		<tx:annotation-driven transaction-manager="transactionManager"/>
+	<context:component-scan base-package="ptithcm.bean, main.controller" />
+</beans>
