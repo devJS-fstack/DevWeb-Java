@@ -1,0 +1,1392 @@
+@charset "UTF-8";
+.navbar-dark .navbar-brand {
+  color: #fff; }
+
+html {
+  scroll-behavior: smooth; }
+
+body {
+  font-family: be vietnam pro, sans-serif; }
+
+img,
+video {
+  max-width: 100%;
+  height: auto; }
+
+a {
+  color: #1890ff;
+  text-decoration: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: color .3s;
+  transition: color .3s;
+  -webkit-text-decoration-skip: objects; }
+
+button {
+  outline: none !important; }
+
+a:active,
+a:focus,
+a:hover {
+  text-decoration: none;
+  outline: 0; }
+
+.modal-login {
+  position: relative;
+  left: 40%; }
+
+.err-login {
+  font-size: 12px;
+  text-align: center;
+  color: red;
+  display: none; }
+
+.err-regis {
+  font-size: 12px;
+  text-align: center;
+  color: red; }
+
+.span-err__regis {
+  font-size: 12px;
+  text-align: center;
+  color: red;
+  position: relative;
+  text-align: center;
+  color: red;
+  position: absolute;
+  display: none;
+  top: 43px; }
+
+.heading-login {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  padding-bottom: 15px;
+  padding-top: 15px; }
+
+.dropdown-item {
+  cursor: pointer; }
+
+.modal .modal-footer {
+  justify-content: center !important; }
+
+.card-body {
+  display: flex;
+  justify-content: space-around; }
+
+.card-header {
+  display: flex;
+  justify-content: center; }
+
+.wid-40pt {
+  width: 40% !important; }
+
+.booking-screen {
+  max-width: 1024px;
+  margin: auto; }
+
+.body-relative {
+  max-width: 500px;
+  margin: auto;
+  background-color: #f7f7f7; }
+
+.relative {
+  position: relative; }
+
+.top-navigator {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  position: relative; }
+
+.top-navigator span {
+  font-size: 18px;
+  font-family: be vietnam pro, sans-serif;
+  font-weight: 600;
+  flex: 1 1;
+  text-align: center; }
+
+.main-screen {
+  font-family: be vietnam pro, sans-serif;
+  font-weight: 300;
+  color: #000;
+  background: #fff;
+  padding: 30px 15px 0;
+  position: relative; }
+
+.main-screen__block--active {
+  border-left: 2px solid #e8e8e8; }
+
+.main-screen__block {
+  background-color: #fff;
+  padding-bottom: 20px;
+  border-left: 2px solid #e8e8e8;
+  padding-left: 18px;
+  position: relative; }
+
+.main-screen__block::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background: #e8e8e8;
+  border-radius: 10px;
+  position: absolute;
+  top: 3px;
+  left: -11px; }
+
+.main-screen__block--active::before {
+  background: #fc3;
+  width: 12px;
+  height: 12px;
+  top: 7px;
+  left: -7px; }
+
+.main-screen__block--active::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background: #fc3;
+  border-radius: 10px;
+  position: absolute;
+  top: 3px;
+  left: -11px;
+  animation: timeline-active 0.7s cubic-bezier(0, 0, 0.2, 1) infinite; }
+
+@keyframes timeline-active {
+  from {
+    background: #fc3; }
+  to {
+    background: transparent; } }
+
+.main-screen__block--done {
+  border-left: 2px solid #fc3; }
+
+.main-screen__block--done::before {
+  background: #fc3; }
+
+.main-screen__block--done::after {
+  content: "✓";
+  font-size: 12px;
+  color: white;
+  position: absolute;
+  top: 3px;
+  left: -5px; }
+
+.first-item {
+  background: #fff;
+  width: 2px;
+  height: 6px;
+  position: absolute;
+  top: 0;
+  left: -2px; }
+
+.title-header__booking {
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin-bottom: 0.75rem; }
+
+.bot-message {
+  position: relative;
+  display: none;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background: #ebf7ef;
+  border: 1px solid #c1e4ca;
+  box-sizing: border-box;
+  border-radius: 8px;
+  width: calc(100% + 40px);
+  z-index: 1;
+  margin-left: -30px;
+  padding: 8px;
+  margin-bottom: 15px; }
+
+.bot-message img {
+  width: 55px;
+  height: 100%;
+  margin-right: 10px;
+  border-radius: 18px;
+  box-shadow: 0 4px 12px #8888; }
+
+.bot-message .content-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; }
+
+.content-message p {
+  text-align: left;
+  font-family: be vietnam pro, sans-serif;
+  padding: 0 5px;
+  font-weight: 300;
+  font-size: 12px;
+  margin: 0; }
+
+.item-center {
+  background-color: #f7f7f7;
+  display: flex;
+  align-items: center;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  height: 2.75rem; }
+
+.salon-icon {
+  position: relative;
+  margin-right: 0.875rem; }
+
+.salon-icon img {
+  display: inline; }
+
+.salon-title {
+  color: #a3a3a3;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  padding-right: 0.125rem;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.salon-icon--active {
+  position: absolute;
+  display: none;
+  width: 0.5rem;
+  height: 0.5rem;
+  top: 0;
+  right: -0.5rem; }
+
+.salon-icon--active__iner {
+  animation: ping 0.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+  background-color: #ea1601;
+  position: absolute;
+  opacity: .75;
+  border-radius: 9999px;
+  width: 100%;
+  height: 100%;
+  display: inline-flex; }
+
+@keyframes ping {
+  0% {
+    width: 0;
+    height: 0;
+    border: 4px solid #ea1601;
+    box-shadow: 0 0 10px #ea1601;
+    opacity: 1; }
+  70% {
+    opacity: 1; }
+  100% {
+    width: 100%;
+    height: 100%;
+    border: 4px solid #ea1601;
+    box-shadow: 0 0 20px #ea1601;
+    opacity: 0; } }
+
+.salon-icon--active__outner {
+  background-color: #ea1601;
+  position: relative;
+  border-radius: 9999px;
+  width: 0.5rem;
+  height: 0.5rem;
+  display: inline-flex; }
+
+.salon-icon--right {
+  width: 0.625rem;
+  margin-left: auto; }
+
+.salon-icon--right img {
+  display: inline; }
+
+.text-validate {
+  font-size: .75rem;
+  line-height: 1rem;
+  margin-top: .375rem;
+  display: none; }
+
+.booking-service {
+  font-family: be vietnam pro, sans-serif;
+  position: relative; }
+
+.ant-anchor-wrapper {
+  max-height: 100vh;
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid #d1d1d1;
+  overflow: auto;
+  background-color: #fff; }
+
+.ant-anchor {
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 14px;
+  font-variant: tabular-nums;
+  line-height: 1.5715;
+  list-style: none;
+  -webkit-font-feature-settings: "tnum";
+  font-feature-settings: "tnum", "tnum";
+  position: relative; }
+
+.swiper-container {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1; }
+
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  transition-property: transform;
+  box-sizing: content-box; }
+
+.swiper-slide {
+  width: auto;
+  margin-bottom: -6px;
+  margin-top: 4px;
+  margin-right: 8px !important;
+  flex-shrink: 0;
+  height: 100%;
+  position: relative;
+  transition-property: transform; }
+
+.ant-anchor-link {
+  border-color: #fc3;
+  font-weight: 600;
+  border-bottom: 3px solid transparent;
+  line-height: 1.6;
+  padding: 7px 8px 7px 8px; }
+
+.ant-anchor-link-title {
+  margin-bottom: 0;
+  position: relative;
+  display: block;
+  margin-bottom: 6px;
+  overflow: hidden;
+  color: rgba(0, 0, 0, 0.85);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  text-decoration: none; }
+
+.note-price {
+  font-family: be vietnam pro, sans-serif;
+  color: #000;
+  font-size: 14px;
+  position: absolute;
+  right: 15px; }
+
+.padding-8 {
+  padding: 8px; }
+
+.booking-service .service {
+  background-color: #fff;
+  padding: 0 8px 8px;
+  margin-bottom: 8px; }
+
+.booking-service .service-category {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 1px 16px; }
+
+.booking-service .service-category .category__name {
+  font-weight: 600;
+  font-size: 16px;
+  color: #111;
+  padding-right: 5px;
+  text-transform: uppercase; }
+
+.booking-service .service-category .category__number {
+  font-weight: 500;
+  font-size: 14px;
+  color: #767676;
+  white-space: nowrap; }
+
+.booking-service .service-list {
+  position: relative; }
+
+.grid {
+  gap: 1rem; }
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+.grid {
+  display: grid; }
+
+.booking-service .service-list .list__item {
+  border: 1px solid #d1d1d1;
+  border-radius: 6px;
+  position: relative;
+  max-width: 250px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
+.booking-service .img {
+  width: 100%; }
+
+.item__title {
+  font-size: 14px;
+  min-height: 44px;
+  color: #111;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  white-space: pre-line;
+  margin: 4px 5px 5px 8px; }
+
+.item__description {
+  margin: 0 8px 8px;
+  color: #5f5f5f;
+  white-space: pre-line;
+  font-weight: 300;
+  font-size: 12px;
+  color: #5f5f5f; }
+
+.item__price {
+  margin: auto 8px 10px;
+  font-size: 14px;
+  color: #111;
+  font-weight: 600; }
+
+.meta__newpirce {
+  padding-right: 10px; }
+
+.booking-service .service-list .list__item .item__button {
+  margin: 0 8px 8px;
+  border: 1px solid #111;
+  border-radius: 3px;
+  color: #111;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 0;
+  font-weight: 600;
+  transition: all .3s;
+  cursor: pointer; }
+
+.pad-lef-rigth-2 {
+  padding: 0 2px; }
+
+.item__button img {
+  display: none; }
+
+.pointer {
+  cursor: pointer; }
+
+.new-affix-v2 {
+  font-size: 25px;
+  font-family: Oswald;
+  position: sticky;
+  bottom: -1px;
+  z-index: 10; }
+
+.new-affix-v2 .content-step {
+  padding: 15px;
+  background: #fff;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between; }
+
+.new-affix-v2 .content-step .button-next {
+  height: 48px;
+  width: 100%;
+  border-radius: 6px;
+  padding: 5px 20px;
+  background: #fc3;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  cursor: pointer; }
+
+.btn-inactive {
+  background: #e8e8e8 !important; }
+
+.new-affix-v2 .content-step .button-next span {
+  font-family: Oswald;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+  display: inline-block; }
+
+.checkedService {
+  background: #ffd65c;
+  border-color: #ffd65c !important; }
+
+.checkedService img {
+  display: block;
+  width: 14px;
+  margin-right: 5px; }
+
+.valueService {
+  display: none; }
+
+.name-service__booked {
+  border-color: #bababa;
+  font-size: .875rem;
+  line-height: 1.25rem;
+  padding-left: 0.375rem;
+  padding-right: 0.375rem;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.25rem;
+  cursor: default;
+  margin-bottom: 0.625rem;
+  margin-left: 0.375rem;
+  margin-right: 0.375rem; }
+
+.flex {
+  display: flex; }
+
+.item-center {
+  align-items: center; }
+
+.style-list {
+  margin: 16px 0;
+  font-family: be vietnam pro, sans-serif;
+  font-weight: 300;
+  color: #000; }
+
+.style-list__dropdown {
+  font-family: be vietnam pro, sans-serif;
+  align-items: center;
+  color: #111;
+  font-size: 14px;
+  font-weight: 500; }
+
+.style-list__dropdown > span {
+  margin-right: 10px; }
+
+.style-list__dropdown > span + span {
+  margin-right: 5px; }
+
+.style-list__dropdown > span img {
+  width: 20px;
+  height: 20px; }
+
+.style-list .content {
+  display: flex;
+  position: relative;
+  font-size: 13px;
+  text-align: center;
+  flex-wrap: wrap; }
+
+.booking-screen .fade-in {
+  animation: fadeIn .3s ease;
+  -webkit-animation: fadeIn .3s ease; }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.style-list .content .left {
+  width: 20%;
+  padding: 10px 0; }
+
+.style-list .content .isActive .user-default {
+  border: 3px solid #f0b000;
+  background: #fff4b6; }
+
+.style-list .content .user-default {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e8e8e8; }
+
+.style-list .content .user-default,
+.style-list .content .img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50px;
+  margin: auto;
+  border: 2px solid #fff; }
+
+.style-list .content .user-default .img-user {
+  width: 34px;
+  height: 34px;
+  border: none; }
+
+.style-list .content .icon-check-default {
+  width: 20px;
+  height: 20px;
+  bottom: -4%;
+  position: absolute;
+  right: 0;
+  border: none !important; }
+
+.hide-stylist {
+  display: none !important; }
+
+.drop-shadow {
+  position: absolute;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1)) drop-shadow(0 1px 1px rgba(0, 0, 0, 0.06));
+  background-color: white;
+  width: 100%;
+  z-index: 10;
+  top: 2.75rem; }
+
+.drop-date__item {
+  border: 1px solid #e8e8e8;
+  font-size: .875rem;
+  line-height: 1.25rem;
+  padding-left: 0.375rem;
+  padding-right: 0.875rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  display: flex; }
+
+.opacity-0 {
+  opacity: 0; }
+
+.opacity-1 {
+  opacity: 1; }
+
+.main-screen .box-time {
+  font-family: Oswald;
+  font-size: 18px;
+  color: #222;
+  margin-top: 35px; }
+
+.main-screen .box-time .box-time__item {
+  background: #fff;
+  border: 1px solid #000;
+  border-radius: 4px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  margin-bottom: 8px;
+  cursor: pointer; }
+
+.item__media img {
+  width: 100%; }
+
+#box-time .swiper-button-prev {
+  display: flex;
+  position: absolute;
+  left: -50px;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #5f5f5f;
+  cursor: pointer;
+  border-color: transparent;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: none; }
+
+#box-time .swiper-button-next {
+  display: flex;
+  position: absolute;
+  right: -50px;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #5f5f5f;
+  cursor: pointer;
+  border-color: transparent;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: none; }
+
+.swiper_button__icon {
+  font-size: 34px;
+  display: flex; }
+
+.main-screen #box-time .unvaliable {
+  border: 1px solid #d1d1d1;
+  background: #e8e8e8;
+  color: #a3a3a3;
+  cursor: not-allowed; }
+
+.main-screen #box-time .has-choice {
+  background: #fc3;
+  border: 1px solid transparent; }
+
+.new-affix-v2 .time-line {
+  padding: 15px 23px;
+  position: relative; }
+
+.space-between {
+  justify-content: space-between; }
+
+.text-center {
+  text-align: center; }
+
+.new-affix-v2 .time-line::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 23px;
+  height: 40px;
+  background: 0 0;
+  border-bottom-left-radius: 10px;
+  border-left: 2px solid #e8e8e8;
+  border-bottom: 2px solid #e8e8e8;
+  left: 0px;
+  top: 0; }
+
+.new-affix-v2 .content-step .button-finally {
+  height: 48px;
+  width: 100%;
+  border-radius: 6px; }
+
+.new-affix-v2 .button-finally {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  padding: 5px 20px;
+  background: #fc3; }
+
+.new-affix-v2 .button-finally span {
+  font-family: Oswald;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  display: inline-block; }
+
+.new-affix-v2 .sub-description {
+  font-family: be vietnam pro, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  display: block;
+  text-align: center;
+  margin-top: 6px; }
+
+.dis-none {
+  display: none !important; }
+
+.booking-done {
+  font-family: be vietnam pro, sans-serif;
+  max-width: 500px;
+  margin: auto;
+  color: #111; }
+
+.booking-done__item {
+  background-color: white;
+  margin-bottom: 0.625rem; }
+
+.booking-done__title {
+  color: #11b14b;
+  display: flex;
+  padding-top: 1.5rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding-bottom: 1.5rem;
+  justify-content: center; }
+
+.booking-done__rotation {
+  border-color: #d1d1d1;
+  border-width: 0;
+  border-top-width: 1px;
+  border-style: solid; }
+
+.booking-done__rotation img {
+  width: 100%;
+  border-radius: 0.5rem; }
+
+.street-booking {
+  color: #111;
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  padding-bottom: 0.25rem;
+  padding-top: 1rem;
+  text-align: center; }
+
+.booking-done__footer {
+  border-color: #d1d1d1;
+  font-weight: 300;
+  font-size: .875rem;
+  line-height: 1.25rem;
+  padding-top: 1rem;
+  border-width: 0;
+  border-top-width: 1px;
+  border-style: solid;
+  text-align: center; }
+
+.booking-done__footer .time-booking {
+  color: #11b14b;
+  font-weight: 600; }
+
+.divide {
+  margin-top: -1rem;
+  margin-bottom: -1rem; }
+
+.divide a {
+  display: flex;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 100%;
+  text-decoration: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer; }
+
+.divide a:nth-child(2) {
+  border-color: #d1d5db;
+  border-width: 0;
+  border-style: solid;
+  border-top-width: calc(1px * calc(1 - 0)); }
+
+.divide a img:first-child {
+  width: 1rem;
+  margin-right: 1rem; }
+
+.divide-title {
+  color: #111;
+  display: flex;
+  font-weight: 400;
+  font-size: .875rem;
+  line-height: 1.25rem; }
+
+.payment-done {
+  border-color: #d1d5db;
+  border-width: 0;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-style: solid; }
+
+.container__booking-info {
+  max-width: 1200px;
+  padding: 0 15px px;
+  margin: auto;
+  width: 100%; }
+
+.list-booking-infor .title-booked {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-family: be vietnam pro, sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 0; }
+
+.box-booking__info {
+  width: 576px;
+  margin-right: 18px;
+  height: 100%;
+  position: relative; }
+
+.box-booking__item {
+  background: #fff;
+  color: #fff;
+  font-family: be vietnam pro, sans-serif;
+  font-size: 16px; }
+
+.box-booking__item .box-booking__content {
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  padding: 20px; }
+
+.box-booking__content .time-to {
+  margin-bottom: 16px; }
+
+.box-booking__content .item:not(:last-child) {
+  margin-bottom: 6px; }
+
+.box-booking__content .item {
+  display: flex;
+  align-items: center; }
+
+.box-booking__content .item span {
+  min-height: 26px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1; }
+
+.box-booking__content .item img {
+  width: 22px;
+  margin-right: 16px; }
+
+.box-booking__action {
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 15px; }
+
+.box-booking__action .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  color: #000;
+  font-family: be vietnam pro, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  padding: 5px 20px;
+  cursor: pointer;
+  transition: all .3s;
+  border: 1px solid rgba(0, 0, 0, 0.13); }
+
+.box-booking__action .button:not(:last-child) {
+  margin-right: 18px; }
+
+.box-booking__action .button:hover {
+  background: #fc3;
+  border-color: #fc3; }
+
+.layout {
+  font-family: be vietnam pro, sans-serif;
+  font-weight: 300;
+  background-color: #fff;
+  margin: 40px 0 30px; }
+
+.home .container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: auto;
+  width: 100%; }
+
+.layout .container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: auto;
+  width: 100%; }
+
+.layout__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 15px; }
+
+.layout__head .head__title {
+  font-family: Oswald;
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 0;
+  color: #111; }
+
+.layout__head .head__title {
+  font-family: Oswald;
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 0;
+  color: #111; }
+
+.layout__head .head__sub-title {
+  font-size: 16px;
+  color: #a6a6a6;
+  text-transform: none;
+  font-family: be vietnam pro, sans-serif;
+  font-weight: 300; }
+
+.layout__head .head__text-view-all {
+  align-self: center;
+  color: #2f80ed;
+  font-family: be vietnam pro, sans-serif;
+  font-weight: 300;
+  cursor: pointer;
+  display: flex;
+  align-items: baseline; }
+
+.layout__head .head__text-view-all img {
+  margin-left: 12px;
+  height: 12px; }
+
+.layout__head .head__text-view-all:hover {
+  text-decoration: underline; }
+
+.layout__banner {
+  margin-bottom: 10px;
+  position: relative;
+  text-align: center; }
+
+.layout__banner .banner__media {
+  border-radius: 4px;
+  overflow: hidden; }
+
+.ant-row,
+.ant-row:after,
+.ant-row:before {
+  display: -ms-flexbox;
+  display: flex; }
+
+.ant-row {
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap; }
+
+.layout__list .list__item {
+  padding: 12px 30px 12px 0;
+  border-top: 1px solid #e8e8e8;
+  display: flex;
+  align-items: center;
+  position: relative; }
+
+.layout .border-none {
+  border: none; }
+
+.layout__list .list__item .item__media {
+  margin-right: 15px;
+  flex: 0 0 80px;
+  height: 100%;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden; }
+
+.layout__list .list__item .item__media:before {
+  transition: all .3s ease-in;
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 40; }
+
+.layout__list .list__item .item__content {
+  display: flex;
+  align-self: center;
+  flex-flow: column; }
+
+.layout__list .list__item .item__title {
+  color: #111;
+  font-weight: 600;
+  font-size: 18px;
+  min-height: 26px;
+  margin: 0; }
+
+.layout__list .list__item .item__subTitle,
+.layout__list .list__item .item__title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical; }
+
+.layout__list .list__item .item__subTitle {
+  color: #686868; }
+
+.ant-col {
+  position: relative;
+  max-width: 100%;
+  min-height: 1px; }
+
+.ant-col-24 {
+  display: block;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%; }
+
+.ant-col-xs-24 {
+  display: block;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%; }
+
+@media (min-width: 768px) {
+  .layout {
+    margin: 40px 0; }
+  .layout__head {
+    padding: 0 0 20px; }
+  .layout__head .head__title {
+    font-size: 28px; }
+  .layout__head .head__sub-title {
+    font-size: 18px;
+    color: #a6a6a6; }
+  .layout__head .head__text-view-all span {
+    display: block; }
+  .layout__banner {
+    margin-bottom: 20px; }
+  .layout__banner .banner__media {
+    border-radius: 8px; }
+  .layout__banner .banner__media img {
+    transition: all .2s ease-in-out; }
+  .layout__banner.hover .banner__media:hover img {
+    transform: scale(1.04); }
+  .layout__list .list__item {
+    border-top: 0;
+    padding-right: 0; }
+  .layout__list .list__item .item__media {
+    flex: 0 0 100px;
+    border-radius: 8px; }
+  .ant-col-md-12 {
+    display: block;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%; }
+  .layout__list .list__item .item__media img {
+    transition: all .2s ease-in-out; }
+  .layout__list .list__item:hover img {
+    transform: scale(1.1); } }
+
+@media (min-width: 992px) {
+  .ant-col-lg-6 {
+    display: block;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%; }
+  .ant-col-lg-12 {
+    display: block;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%; } }
+
+.footer-v3 {
+  background-color: #000;
+  font-family: be vietnam pro, sans-serif;
+  font-weight: 300; }
+
+.footer-v3__container {
+  padding: 0;
+  margin: auto;
+  max-width: 1200px; }
+
+.footer-top {
+  display: flex;
+  flex-direction: row; }
+
+.footer-top__column-info {
+  padding: 15px;
+  color: #fff; }
+
+.footer-top__column-app,
+.footer-top__column-info {
+  width: 33%;
+  padding: 35px 15px 15px; }
+
+.footer-top .footer__info {
+  padding-left: 0;
+  list-style-type: none;
+  margin-bottom: 3px; }
+
+.footer-top .footer__info-item {
+  font-size: 14px;
+  font-weight: 300; }
+
+.footer-top .footer__info-item.title {
+  font-weight: 600;
+  font-size: 16px; }
+
+.footer-top .footer__info-item .info-item__text {
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px; }
+
+.footer-top .footer__ca {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 15px; }
+
+.footer-top .footer__ca .moit-icon {
+  height: 60px;
+  margin-right: 10px; }
+
+.footer-top .footer__ca .dmca-icon {
+  height: 40px; }
+
+.app-cash {
+  margin-top: 15px; }
+
+.app-cash .app-cash__label {
+  color: #fff; }
+
+.app-cash .app-cash__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+.app-cash .app-cash__list .app-cash__item {
+  margin-right: 20px; }
+
+.footer-top__column-service {
+  width: 33%;
+  padding: 35px 15px 15px;
+  display: inline-block;
+  color: #fff; }
+
+.footer-top__column-service .service-time__label {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  font-family: Oswald; }
+
+.footer-top__column-service .service-time__detail {
+  font-size: 16px; }
+
+.button-hotline {
+  border: 1px solid #fabd05;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  padding: 12px; }
+
+.footer-top__column-service .button-hotline {
+  padding: 6px;
+  margin-top: 30px; }
+
+.button-hotline span {
+  color: #fabd05;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 20px;
+  margin-left: 10px;
+  font-family: Oswald; }
+
+.footer-top__column-app {
+  color: #fff; }
+
+.footer-top__column-app .app-info__label {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  font-family: Oswald; }
+
+.footer-top__column-app .app-info__detail {
+  font-size: 16px; }
+
+.footer-top__column-app .app-badge {
+  display: flex;
+  margin-top: 30px;
+  flex-direction: row; }
+
+.footer-top__column-app .app-badge .badge-item {
+  margin-right: 20px; }
+
+.footer-top__column-app .app-badge .badge-item img {
+  height: 40px; }
+
+.footer-top__column-app .social-info {
+  margin-top: 45px; }
+
+.footer-bottom {
+  margin-top: 2rem;
+  border-top: 1px solid #3d3d3d;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px; }
+
+.copyright {
+  display: block;
+  text-align: center;
+  color: #5f5f5f;
+  font-size: 14px; }
+
+.footer-bottom .footer-nav {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center; }
+
+.footer-bottom .footer-nav {
+  color: #fff;
+  font-size: 16px;
+  padding-left: 0;
+  list-style-type: none;
+  margin-bottom: 10px; }
+
+.footer-bottom .footer-nav__item {
+  margin-bottom: 10px; }
+
+.footer-bottom .footer-nav__item > a {
+  margin-right: 30px; }
+
+.footer-bottom .footer-nav__item a {
+  color: #fff; }
+
+.ant-input {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-variant: tabular-nums;
+  list-style: none;
+  -webkit-font-feature-settings: 'tnum';
+  font-feature-settings: 'tnum';
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 32px;
+  padding: 4px 11px;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 14px;
+  line-height: 1.5;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
+
+.ant-input:focus {
+  border-color: #40a9ff;
+  border-right-width: 1px !important;
+  outline: 0; }
+
+.ant-input:hover {
+  border-color: #40a9ff;
+  border-right-width: 1px !important; }
+
+.changepass {
+  min-height: 17.1875rem;
+  box-sizing: border-box;
+  box-shadow: 0 4px 12px #8888;
+  border-radius: 0.25rem;
+  overflow: hidden; }
+
+.header-change-pass {
+  box-sizing: border-box;
+  min-height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: be vietnam pro, sans-serif; }
+
+.body-change-pass {
+  padding: 0 1rem 0rem; }
+
+.input-change {
+  margin: 1.25rem auto 0.3125rem; }
+
+.input-change-pass {
+  outline: none;
+  border: 0;
+  flex: 1;
+  flex-shrink: 0;
+  filter: none; }

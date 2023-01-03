@@ -21,9 +21,11 @@
 	
 	<mvc:resources location="/resources/" mapping="/resources/**"></mvc:resources>
 	<mvc:resources location="/client/" mapping="/client/**"></mvc:resources>
+	<mvc:resources location="/WEB-INF/views/" mapping="/WEB-INF/views/**"></mvc:resources>
+	
 	<!-- Cấu hình view -->
 	<bean id="viewResolver" 
-		p:prefix="/WEB-INF/views/" p:suffix=".jsp"
+		p:prefix="/WEB-INF/views/" p:suffix="index.jsp"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver"/>
    	
    	<!-- Cấu hình package chứa các controller -->
